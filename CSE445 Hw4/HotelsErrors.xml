@@ -55,7 +55,7 @@
     <Hotel Rating = "4.1">
         <Name>Cambria Hotel</Name>
         <Phone>623-462-8271</Phone>
-        <Address NearestAirport = "Sky Harbor"
+        <Address NearestAirport = "Sky Harbor">
             <Number>222</Number>
             <Street>E Portland St</Street>
             <City>Phoenix</City>
@@ -137,4 +137,4 @@
         </Address>
     </Hotel> 
     
-</Hotels>  
+</>

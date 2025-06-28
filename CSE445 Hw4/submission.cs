@@ -3,6 +3,8 @@ using System.Xml.Schema;
 using System.Xml;
 using Newtonsoft.Json;
 using System.IO;
+using System.Collections.Generic;
+using System.Runtime;
 
 
 
@@ -20,10 +22,10 @@ namespace ConsoleApp1
     public class Program
     {
         public static string xmlURL = "https://lsdake.github.io/CSE445%20Hw4/Hotels.xml";
-        public static string xmlErrorURL = "Your Error XML URL";
+        public static string xmlErrorURL = "https://lsdake.github.io/CSE445%20Hw4/HotelsErrors.xml";
         public static string xsdURL = "https://lsdake.github.io/CSE445%20Hw4/Hotels.xsd";
 
-         public static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // (1) Validate correct XML
             string result = Verification(xmlURL, xsdURL);
@@ -79,39 +81,56 @@ namespace ConsoleApp1
             return validationError ?? "No Error";
         }
 
-        
-        // Q2.2: Convert XML to JSON string
-        
-        // Q2.2: Convert XML to JSON string
+        // Q2.2: Convert XML to JSON string with desired structure
+        // Q2.2: Convert XML to JSON string with desired structure
         public static string Xml2Json(string xmlUrl)
         {
             try
             {
-                // Load XML
-                XmlDocument doc = new XmlDocument();
+                var doc = new XmlDocument();
                 doc.Load(xmlUrl);
+                var root = doc.DocumentElement;  // <Hotels>
 
-                // Convert XML to JSON with attribute prefix '_' and arrays for repeating elements
-                var settings = new JsonSerializerSettings
+                var hotelArray = new Newtonsoft.Json.Linq.JArray();
+                foreach (XmlNode hotelNode in root.SelectNodes("Hotel"))
                 {
-                    Converters = new List<JsonConverter>
-                    {
-                        new XmlNodeConverter
-                        {
-                            // prefix attributes with underscore
-                            AttributePrefix = "_",
-                            // ignore duplicate element name handling to form arrays automatically
-                            IsArray = (name, node) => node.ParentNode.SelectNodes(name).Count > 1
-                        }
-                    },
-                    Formatting = Formatting.Indented,
-                    // do not include the XML declaration
-                    DateParseHandling = DateParseHandling.None
-                };
+                    var jHotel = new Newtonsoft.Json.Linq.JObject();
+                    // Name
+                    jHotel["Name"] = hotelNode.SelectSingleNode("Name").InnerText;
+                    // Phone array
+                    var phones = new Newtonsoft.Json.Linq.JArray();
+                    foreach (XmlNode phone in hotelNode.SelectNodes("Phone"))
+                        phones.Add(phone.InnerText);
+                    jHotel["Phone"] = phones;
+                    // Address object
+                    var addrNode = hotelNode.SelectSingleNode("Address");
+                    var jAddr = new Newtonsoft.Json.Linq.JObject();
+                    jAddr["Number"] = addrNode.SelectSingleNode("Number").InnerText;
+                    jAddr["Street"] = addrNode.SelectSingleNode("Street").InnerText;
+                    jAddr["City"] = addrNode.SelectSingleNode("City").InnerText;
+                    jAddr["State"] = addrNode.SelectSingleNode("State").InnerText;
+                    jAddr["Zip"] = addrNode.SelectSingleNode("Zip").InnerText;
+                    // NearestAirport attribute as _NearestAirport
+                    var attr = ((XmlElement)addrNode).GetAttribute("NearestAirport");
+                    jAddr["_NearestAirport"] = attr;
+                    jHotel["Address"] = jAddr;
+                    // Optional Rating attribute
+                    var ratingAttr = ((XmlElement)hotelNode).GetAttribute("Rating");
+                    if (!string.IsNullOrEmpty(ratingAttr))
+                        jHotel["_Rating"] = ratingAttr;
 
-                // Serialize with root object preserved
-                string jsonText = JsonConvert.SerializeObject(doc.DocumentElement, settings);
-                return jsonText;
+                    hotelArray.Add(jHotel);
+                }
+
+                // Assemble final structure
+                var rootObj = new Newtonsoft.Json.Linq.JObject(
+                    new Newtonsoft.Json.Linq.JProperty("Hotels",
+                        new Newtonsoft.Json.Linq.JObject(
+                            new Newtonsoft.Json.Linq.JProperty("Hotel", hotelArray)
+                        )
+                    )
+                );
+                return rootObj.ToString();
             }
             catch (Exception ex)
             {
