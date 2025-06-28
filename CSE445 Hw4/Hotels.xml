@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Courses.xsl"?>
 <Hotels>
-    xmlns ="http://venus.sod.asu.edu/WSRepository/xml"
+    xmlns ="https://lsdake.github.io/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://lsdake.github.io/CSE445%20Hw4/Hotels.xsd">
+    xsi:schemaLocation="https://lsdake.github.io/CSE445 Hw4/Hotels.xsd">
     <Hotel Rating = "4.2">
         <Name>Westin</Name>
         <Phone>"480-968-8885"</Phone>
@@ -136,5 +136,5 @@
             <Zip>86001</Zip>
         </Address>
     </Hotel> 
-    
+
 </Hotels>  
