@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Courses.xsl"?>
+<Hotels>
+    xmlns ="http://venus.sod.asu.edu/WSRepository/xml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://lsdake.github.io/CSE445%20Hw4/Hotels.xsd">
+    <Hotel Rating = "4.2">
+        <Name>Westin</Name>
+        <Phone>"480-968-8885"</Phone>
+        <Phone>"800-937-8461"</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>"11"</Number>
+            <Street>"E. 7th St"</Street>
+            <City>"Tempe"</City>
+            <State>"AZ"</State>
+            <Zip>"85281"</Zip>
+        </Address>
+    </Hotel>
+
+    <Hotel Rating = "4.5">
+        <Name>Scottsdale Plaza Resort</Name>
+        <Phone>480-948-5000</Phone>
+        <Address NearestAirport = "Scottsdale Airport">
+            <Number>7200</Number>
+            <Street>N. Scottsdale Road</Street>
+            <City>Scottsdale</City>
+            <State>AZ</State>
+            <Zip>85253</Zip>
+        </Address>
+    </Hotel>
+
+    <Hotel Rating = "4.2">
+        <Name>Hyatt Place Scottsdale</Name>
+        <Phone>480-423-9944</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>7300</Number>
+            <Street>E 3rd Ave</Street>
+            <City>Scottsdale</City>
+            <State>AZ</State>
+            <Zip>85251</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "3.9">
+        <Name>DoubleTree Suites</Name>
+        <Phone>480-948-5000</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>320</Number>
+            <Street>N 44th St</Street>
+            <City>Phoenix</City>
+            <State>AZ</State>
+            <Zip>85008</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "4.1">
+        <Name>Cambria Hotel</Name>
+        <Phone>623-462-8271</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>222</Number>
+            <Street>E Portland St</Street>
+            <City>Phoenix</City>
+            <State>AZ</State>
+            <Zip>85004</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "4.2">
+        <Name>Hilton Vacation Club</Name>
+        <Phone>480-473-4000</Phone>
+        <Address NearestAirport = "Scottsdale Airport">
+            <Number>7887</Number>
+            <Street>E Princess Blvd</Street>
+            <City>Scottsdale</City>
+            <State>AZ</State>
+            <Zip>85255</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "4.1">
+        <Name>Sonesta Select</Name>
+        <Phone>480-763-9500</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>920</Number>
+            <Street>N 54th St</Street>
+            <City>Chandler</City>
+            <State>AZ</State>
+            <Zip>85226</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "4.3">
+        <Name>Courtyard Phoenix West/Avondale</Name>
+        <Phone>623-271-7660</Phone>
+        <Address NearestAirport = "Sky Harbor">
+            <Number>1650 </Number>
+            <Street>N 95th Ln</Street>
+            <City>Phoenix</City>
+            <State>AZ</State>
+            <Zip>85037</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "3.6">
+        <Name>Hotel Aspen Inn Suites</Name>
+        <Phone>480-948-5000</Phone>
+        <Address NearestAirport = "Flagstaff Airport">
+            <Number>1008</Number>
+            <Street>E Rte 66</Street>
+            <City>Flagstaff</City>
+            <State>AZ</State>
+            <Zip>85253</Zip>
+        </Address>
+    </Hotel> 
+
+    <Hotel Rating = "5.0">
+        <Name>San Francisco Peaks Wildernest</Name>
+        <Phone>928-255-8781</Phone>
+        <Address NearestAirport = "Flagstaff Airport">
+            <Number>5645</Number>
+            <Street>E Campbell Ave</Street>
+            <City>Flagstaff</City>
+            <State>AZ</State>
+            <Zip>86004</Zip>
+        </Address>
+    </Hotel>
+
+    <Hotel Rating = "4.6">
+        <Name>Drury Inn and Suites</Name>
+        <Phone>928-773-4900</Phone>
+        <Address NearestAirport = "Scottsdale Airport">
+            <Number>300</Number>
+            <Street>S Milton Rd</Street>
+            <City>Flagstaff</City>
+            <State>AZ</State>
+            <Zip>86001</Zip>
+        </Address>
+    </Hotel> 
+
+        
+</Hotels>  
