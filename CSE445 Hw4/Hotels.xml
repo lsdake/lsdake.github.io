@@ -41,7 +41,7 @@
         </Address>
     </Hotel> 
 
-    <Hotel Rating = "3.9">
+    <Hotel>
         <Name>DoubleTree Suites</Name>
         <Phone>480-948-5000</Phone>
         <Address NearestAirport = "Sky Harbor">
@@ -89,7 +89,7 @@
         </Address>
     </Hotel> 
 
-    <Hotel Rating = "4.3">
+    <Hotel>
         <Name>Courtyard Phoenix West/Avondale</Name>
         <Phone>623-271-7660</Phone>
         <Address NearestAirport = "Sky Harbor">
