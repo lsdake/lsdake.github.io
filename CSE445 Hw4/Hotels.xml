@@ -12,7 +12,7 @@
         <Address NearestAirport = "Sky Harbor">
             <Number>11</Number>
             <Street>E. 7th St</Street>
-            <City>"Tempe"</City>
+            <City>Tempe</City>
             <State>AZ</State>
             <Zip>85281</Zip>
         </Address>
