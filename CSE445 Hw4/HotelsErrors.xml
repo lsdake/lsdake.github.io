@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="Hotels.xsd"?>
-<Hotel>
-    xmlns ="http://venus.sod.asu.edu/WSRepository/xml"
+<?xml-stylesheet type="text/xsd" href="Hotels.xsd"?>
+<Hotel 
+    xmlns="https://lsdake.github.io/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://lsdake.github.io/CSE445%20Hw4/Hotels.xsd">
+    xsi:schemaLocation="https://lsdake.github.io/ https://lsdake.github.io/CSE445%20Hw4/Hotels.xsd">
+
     <Hotel Rating = "4.2">
         <Name>Westin</Name>
-        <Phone>"480-968-8885"</Phone>
-        <Phone>"800-937-8461"</Phone>
-        <Address NearestAirport = "Sky Harbor">
-            <Number>"11"</Number>
-            <Street>"E. 7th St"</Street>
-            <City>"Tempe"</City>
-            <State>"AZ"</State>
-            <Zip>"85281"</Zip>
+        <Phone>480-968-8885</Phone>
+        <Phone>800-937-8461</Phone>
+        <Address>
+            <Number>11</Number>
+            <Street>E. 7th St</Street>
+            <City>Tempe</City>
+            <State>AZ</State>
+            <Zip>85281</Zip>
         </Address>
     </Hotel>
 
     <Hotel Rating = "4.5">
         <Name>Scottsdale Plaza Resort</Name>
-        <Phone>480-948-5000</Phone>
-        <Address>
+        <Address NearestAirport = "Scottsdale Airport">
             <Number>7200</Number>
             <Street>N. Scottsdale Road</Street>
             <City>Scottsdale</City>
@@ -31,7 +31,8 @@
 
     <Hotel Rating = "4.2">
         <Name>Hyatt Place Scottsdale</Name>
-        <Address NearestAirport = "Sky Harbor">
+        <Phone>480-423-9944</Phone>
+        <Address NearestAirport = "Sky Harbor"
             <Number>7300</Number>
             <Street>E 3rd Ave</Street>
             <City>Scottsdale</City>
@@ -42,6 +43,7 @@
 
     <Hotel>
         <Name>DoubleTree Suites</Name>
+        <Name>Turbo Stinky</Name>
         <Phone>480-948-5000</Phone>
         <Address NearestAirport = "Sky Harbor">
             <Number>320</Number>
@@ -78,7 +80,6 @@
 
     <Hotel Rating = "4.1">
         <Name>Sonesta Select</Name>
-        <Name>Evil Stinky Hotel</Name>
         <Phone>480-763-9500</Phone>
         <Address NearestAirport = "Sky Harbor">
             <Number>920</Number>
@@ -135,6 +136,5 @@
             <State>AZ</State>
             <Zip>86001</Zip>
         </Address>
-    </Hotel> 
-    
-</>
+    </Hotel>
+</Hotels>
